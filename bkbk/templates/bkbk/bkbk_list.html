@@ -1,0 +1,25 @@
+<a class="ui green button right" style="float:left;" href="#">Add Bookmark</a>
+
+<div style="clear:both;"></div>
+    <table class="ui celled table" style="margin-top:10px;">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Site</th>
+            <th scope="col">URL</th>
+            <th scope="col">Modify</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for Bkbk in object_list %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td><a href="#">{{Bkbk.name}}</a></td>
+                <td><a href="{{Bkbk.url}}" target="_blank">{{Bkbk.url}}</a></td>
+                <td><a href="#" class="btn btn-success btn-sm">Modify </a></td>
+                <td><a href="##" class="btn btn-danger btn-sm">Delete </a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
