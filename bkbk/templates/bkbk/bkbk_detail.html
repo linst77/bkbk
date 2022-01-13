@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Detail{% endblock %}
+{% block content %}
+
 site : {{object.site_name}}</br>
 url : {{object.site_url}}</br>
 <a href="{% url 'list' %}" class="btn btn-success btn-sm">List</a>
 
-</body>
-</html>
+{% endblock %}

@@ -1,4 +1,7 @@
-<a class="ui green button right" style="float:left;" href="{% url 'create' %}">Add Bookmark</a>
+{% extends 'base.html' %}
+{% block title %}List{% endblock %}
+{% block content %}
+<a href="{% url 'create' %}" class="btn btn-info btn-sm" style="float:left">Add Bookmark</a>
 
 <div style="clear:both;"></div>
     <table class="ui celled table" style="margin-top:10px;">
@@ -23,3 +26,4 @@
         {% endfor %}
         </tbody>
     </table>
+{% endblock %}
